@@ -1,4 +1,5 @@
 import { Box, Stack, Typography, Button, useMediaQuery, useTheme } from "@mui/material";
+import { Link } from "react-router-dom";
 
 import logo from "../assets/logos/logo.png";
 import iso from "../assets/logos/iso.png";
@@ -88,6 +89,8 @@ export default function MainHeader() {
 
       {/* RIGHT – CTA */}
       <Button
+        component={Link}
+        to="/contact"
         variant="contained"
         sx={{
           bgcolor: "#fbc02d",
@@ -98,6 +101,7 @@ export default function MainHeader() {
           fontWeight: 600,
           whiteSpace: "nowrap",
           flexShrink: 0,
+          textDecoration: "none",
           "&:hover": { bgcolor: "#f9a825" },
         }}
       >
