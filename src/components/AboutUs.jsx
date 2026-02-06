@@ -4,8 +4,9 @@ import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 
-import buildingImg from "../assets/gallery/MAD_0444.JPG";
+import buildingImg from "../assets/gallery/MAD_0431.JPG";
 import workersImg from "../assets/about/workers.jpg";
+import factoryImg from "../assets/gallery/MAD_0432.JPG";
 
 export default function AboutUs() {
   return (
@@ -69,34 +70,68 @@ export default function AboutUs() {
         <Grid container spacing={6} alignItems="center">
           {/* LEFT COLUMN - IMAGE AND TEXT */}
           <Grid item xs={12} md={6}>
-            {/* BUILDING IMAGE */}
+            {/* BUILDING IMAGES */}
             <Box
               sx={{
-                width: 600,
-                maxWidth: "100%",
-                height: 400,
-                borderRadius: 2,
-                overflow: "hidden",
+                display: "flex",
+                gap: 2,
                 mb: 4,
-                boxShadow: "0 10px 40px rgba(0,0,0,0.1)",
-                transition: "transform 0.3s ease",
-                "&:hover": {
-                  transform: "translateY(-5px)",
-                  boxShadow: "0 15px 50px rgba(0,0,0,0.15)",
-                }
+                flexDirection: { xs: "column", sm: "row" },
               }}
             >
               <Box
-                component="img"
-                src={buildingImg}
-                alt="Fashion Creator Factory"
                 sx={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
+                  width: { xs: "100%", sm: "50%" },
+                  height: 400,
+                  borderRadius: 2,
+                  overflow: "hidden",
+                  boxShadow: "0 10px 40px rgba(0,0,0,0.1)",
+                  transition: "transform 0.3s ease",
+                  "&:hover": {
+                    transform: "translateY(-5px)",
+                    boxShadow: "0 15px 50px rgba(0,0,0,0.15)",
+                  }
                 }}
-              />
+              >
+                <Box
+                  component="img"
+                  src={buildingImg}
+                  alt="Fashion Creator Factory"
+                  sx={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                  }}
+                />
+              </Box>
+
+              <Box
+                sx={{
+                  width: { xs: "100%", sm: "50%" },
+                  height: 400,
+                  borderRadius: 2,
+                  overflow: "hidden",
+                  boxShadow: "0 10px 40px rgba(0,0,0,0.1)",
+                  transition: "transform 0.3s ease",
+                  "&:hover": {
+                    transform: "translateY(-5px)",
+                    boxShadow: "0 15px 50px rgba(0,0,0,0.15)",
+                  }
+                }}
+              >
+                <Box
+                  component="img"
+                  src={factoryImg}
+                  alt="Fashion Creator Factory"
+                  sx={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                  }}
+                />
+              </Box>
             </Box>
+            
 
             {/* DESCRIPTION TEXT */}
             <Typography 
