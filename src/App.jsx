@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 
+import ScrollToTop from "./components/ScrollToTop";
 import TopInfoBar from "./components/TopInfoBar";
 import MainHeader from "./components/MainHeader";
 import Navbar from "./components/Navbar";
@@ -19,6 +20,7 @@ import Patron from "./pages/Patron";
 function App() {
   return (
     <>
+      <ScrollToTop />
       <TopInfoBar />
       <MainHeader />
       <Navbar />
