@@ -1,4 +1,5 @@
 import { Box, Typography, Divider, Grid, Container, Button } from "@mui/material";
+import { Link } from "react-router-dom";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
@@ -124,7 +125,8 @@ export default function AboutUs() {
 </Typography>
             <Box mt={4}>
   <Button
-    href="/about"
+    component={Link}
+    to="/about"
     variant="contained"
     endIcon={<ArrowForwardIcon />}
     sx={{
@@ -136,6 +138,7 @@ export default function AboutUs() {
       borderRadius: 1,
       textTransform: "none",
       fontSize: 15,
+      textDecoration: "none",
       boxShadow: "0 8px 20px rgba(251,192,45,0.4)",
       "&:hover": {
         bgcolor: "#f9a825",

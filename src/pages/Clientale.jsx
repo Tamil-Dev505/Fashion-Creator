@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Box, Typography, Container, Grid, Card, Button, Avatar, Chip } from "@mui/material";
 import { 
   Public, 
@@ -793,7 +794,8 @@ export default function Clientale() {
           </Typography>
           <Box sx={{ display: "flex", gap: 2, justifyContent: "center", flexWrap: "wrap" }}>
             <Button
-              href="/contact"
+              component={Link}
+              to="/contact"
               variant="contained"
               size="large"
               endIcon={<ArrowForward />}
@@ -806,6 +808,7 @@ export default function Clientale() {
                 fontSize: 16,
                 borderRadius: 2,
                 textTransform: "none",
+                textDecoration: "none",
                 boxShadow: "0 8px 25px rgba(0,0,0,0.3)",
                 "&:hover": {
                   bgcolor: "#000",
@@ -817,7 +820,8 @@ export default function Clientale() {
               Get In Touch
             </Button>
             <Button
-              href="/gallery"
+              component={Link}
+              to="/gallery"
               variant="outlined"
               size="large"
               sx={{
@@ -830,6 +834,7 @@ export default function Clientale() {
                 fontSize: 16,
                 borderRadius: 2,
                 textTransform: "none",
+                textDecoration: "none",
                 "&:hover": {
                   borderWidth: 2,
                   bgcolor: "rgba(33,33,33,0.1)",

@@ -1,4 +1,5 @@
   import { useState } from "react";
+  import { Link } from "react-router-dom";
   import {
     Box,
     Typography,
@@ -630,8 +631,8 @@
               Witness firsthand our commitment to quality and craftsmanship.
             </Typography>
             <Box
-              component="a"
-              href="/contact"
+              component={Link}
+              to="/contact"
               sx={{
                 display: "inline-block",
                 bgcolor: "#fbc02d",
