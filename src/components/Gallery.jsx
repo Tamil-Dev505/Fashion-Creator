@@ -102,11 +102,13 @@ export default function Gallery() {
               <Grid item xs={12} sm={6} md={3} key={index}>
                 <Box
                   sx={{
-                    height: 260,
+                    width: 300,
+                    height: 420,
                     borderRadius: 2,
                     overflow: "hidden",
                     position: "relative",
                     cursor: "pointer",
+                    mx: "auto",
                     boxShadow: "0 10px 30px rgba(0,0,0,0.15)",
                     transition: "all 0.3s ease",
                     "&:hover": {
