@@ -20,6 +20,7 @@ import {
 import oeko from "../assets/logos/oeko.png";
 import sedex from "../assets/logos/sedex.png";
 import iso from "../assets/logos/iso.png";
+import fama from "../assets/logos/fama.png";
 
 // Import client logos
 import logo1 from "../assets/logos/logo1.png";
@@ -684,7 +685,8 @@ export default function Clientale() {
             {[
               { img: oeko, name: "OEKO-TEX Certified" },
               { img: sedex, name: "SEDEX Member" },
-              { img: iso, name: "ISO Certified" }
+              { img: iso, name: "ISO Certified" },
+              { img: fama, name: "FAMA Certified" }
             ].map((cert, index) => (
               <Box
                 key={index}
