@@ -10,7 +10,7 @@ import g5 from "../assets/gallery/g5.jpg";
 import g6 from "../assets/gallery/g6.jpg";
 import g7 from "../assets/gallery/g7.jpg";
 import g8 from "../assets/gallery/g8.jpg";
-import g9 from "../assets/gallery/g9.jpg";
+import g9 from "../assets/gallery/g9.JPG";
 
 const images = [g1, g2, g3, g4, g5, g6, g7, g8, g9];
 
