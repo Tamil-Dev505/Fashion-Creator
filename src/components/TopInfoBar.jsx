@@ -1,26 +1,19 @@
-import { Box, Stack, Typography, useMediaQuery, useTheme } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import PhoneIcon from "@mui/icons-material/Phone";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 
 export default function TopInfoBar() {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
-
-  // Hide on mobile for cleaner look
-  if (isMobile) {
-    return null;
-  }
-
   return (
     <Box
       sx={{
         bgcolor: "#f2f2f2",
-        height: 40,
-        px: { xs: 2, md: 4 },
+        minHeight: { xs: 32, md: 40 },
+        px: { xs: 1, sm: 2, md: 4 },
+        py: { xs: 0.5, md: 0 },
         display: "flex",
         alignItems: "center",
-        justifyContent: "space-between",
+        justifyContent: { xs: "center", md: "space-between" },
         fontSize: 13,
       }}
     >
@@ -32,19 +25,20 @@ export default function TopInfoBar() {
       {/* CENTER */}
       <Stack 
         direction="row" 
-        spacing={{ xs: 1, md: 3 }} 
+        spacing={{ xs: 1, sm: 2, md: 3 }} 
         alignItems="center"
         sx={{ flexWrap: "wrap", justifyContent: "center" }}
       >
         <Stack direction="row" spacing={0.5} alignItems="center">
-          <PhoneIcon sx={{ fontSize: 14, color: "#fbc02d" }} />
-          <Typography sx={{ fontSize: { xs: 11, md: 13 } }}>+91 98429 03603</Typography>
+          <PhoneIcon sx={{ fontSize: { xs: 12, md: 14 }, color: "#fbc02d" }} />
+          <Typography sx={{ fontSize: { xs: 10, sm: 11, md: 13 } }}>+91 98429 03603</Typography>
         </Stack>
-        <Stack direction="row" spacing={0.5} alignItems="center" sx={{ display: { xs: "none", sm: "flex" } }}>
-          <AccessTimeIcon sx={{ fontSize: 14, color: "#fbc02d" }} />
-          <Typography sx={{ fontSize: { xs: 11, md: 13 } }}>Mon – Sat 09:00 – 18:00</Typography>
+        <Stack direction="row" spacing={0.5} alignItems="center">
+          <AccessTimeIcon sx={{ fontSize: { xs: 12, md: 14 }, color: "#fbc02d" }} />
+          <Typography sx={{ fontSize: { xs: 10, sm: 11, md: 13 }, display: { xs: "none", sm: "block" } }}>Mon – Sat 09:00 – 18:00</Typography>
+          <Typography sx={{ fontSize: { xs: 10, sm: 11, md: 13 }, display: { xs: "block", sm: "none" } }}>9AM – 6PM</Typography>
         </Stack>
-        <Stack direction="row" spacing={0.5} alignItems="center" sx={{ display: { xs: "none", lg: "flex" } }}>
+        <Stack direction="row" spacing={0.5} alignItems="center" sx={{ display: { xs: "none", md: "flex" } }}>
           <LocationOnIcon sx={{ fontSize: 14, color: "#fbc02d" }} />
           <Typography sx={{ fontSize: { xs: 11, md: 13 } }}>Tirupur, Tamil Nadu</Typography>
         </Stack>
