@@ -72,8 +72,9 @@ export default function AboutUs() {
             {/* BUILDING IMAGE */}
             <Box
               sx={{
-                width: "100%",
-                height: 420,
+                width: 600,
+                maxWidth: "100%",
+                height: 400,
                 borderRadius: 2,
                 overflow: "hidden",
                 mb: 4,
