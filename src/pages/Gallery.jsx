@@ -396,7 +396,18 @@
 
             {/* Filter Buttons */}
             <Box sx={{ mb: 6, display: "flex", justifyContent: "center" }}>
-              <ButtonGroup variant="outlined" sx={{ gap: 1, flexWrap: "wrap" }}>
+              <ButtonGroup 
+                variant="outlined" 
+                sx={{ 
+                  gap: 1, 
+                  flexWrap: "wrap", 
+                  justifyContent: "center",
+                  "& .MuiButtonGroup-grouped": {
+                    borderRadius: "4px !important",
+                    border: "1px solid #fbc02d !important",
+                  }
+                }}
+              >
                 {filterCategories.map((category) => (
                   <Button
                     key={category.value}
@@ -407,8 +418,9 @@
                       borderColor: "#fbc02d",
                       fontWeight: 600,
                       textTransform: "capitalize",
-                      px: 3,
-                      py: 1.2,
+                      px: { xs: 2, md: 3 },
+                      py: { xs: 0.8, md: 1.2 },
+                      fontSize: { xs: 12, md: 14 },
                       transition: "all 0.3s ease",
                       "&:hover": {
                         bgcolor: activeFilter === category.value ? "#f9a825" : "rgba(251,192,45,0.1)",
@@ -430,8 +442,8 @@
                       position: "relative",
                       borderRadius: 2,
                       overflow: "hidden",
-                      width: 320,
-                      height: 420,
+                      width: "100%",
+                      height: { xs: 220, sm: 280, md: 350, lg: 420 },
                       cursor: "pointer",
                       boxShadow: "0 4px 15px rgba(0, 0, 0, 0.1)",
                       transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",

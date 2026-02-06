@@ -34,7 +34,7 @@ export default function HeroSlider() {
   return (
     <Box 
       sx={{ 
-        height: "80vh", 
+        height: { xs: "70vh", sm: "75vh", md: "80vh" }, 
         position: "relative",
         "@keyframes fadeInUp": {
           "0%": {
@@ -80,7 +80,7 @@ export default function HeroSlider() {
           <SwiperSlide key={index}>
             <Box
               sx={{
-                height: "80vh",
+                height: { xs: "70vh", sm: "75vh", md: "80vh" },
                 backgroundImage: `url(${slide.image})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
@@ -126,6 +126,7 @@ export default function HeroSlider() {
                     fontWeight: 700,
                     mt: 2,
                     lineHeight: 1.2,
+                    fontSize: { xs: "1.5rem", sm: "2rem", md: "2.75rem", lg: "3.25rem" },
                     animation: "fadeInUp 0.8s ease-out 0.2s forwards",
                     opacity: 0,
                   }}
@@ -136,8 +137,8 @@ export default function HeroSlider() {
                 <Typography
                   sx={{
                     color: "#ddd",
-                    mt: 3,
-                    fontSize: 16,
+                    mt: { xs: 2, md: 3 },
+                    fontSize: { xs: 13, sm: 14, md: 16 },
                     animation: "fadeInUp 0.8s ease-out 0.4s forwards",
                     opacity: 0,
                   }}
@@ -146,9 +147,9 @@ export default function HeroSlider() {
                 </Typography>
 
                 <Stack 
-                  direction="row" 
-                  spacing={3} 
-                  mt={5}
+                  direction={{ xs: "column", sm: "row" }} 
+                  spacing={{ xs: 2, sm: 3 }} 
+                  mt={{ xs: 3, md: 5 }}
                   sx={{
                     animation: "fadeInUp 0.8s ease-out 0.6s forwards",
                     opacity: 0,
@@ -159,9 +160,11 @@ export default function HeroSlider() {
                     sx={{
                       bgcolor: "#fbc02d",
                       color: "#000",
-                      px: 4,
-                      py: 1.4,
+                      px: { xs: 3, md: 4 },
+                      py: { xs: 1.2, md: 1.4 },
+                      fontSize: { xs: 13, md: 14 },
                       fontWeight: 600,
+                      width: { xs: "100%", sm: "auto" },
                       "&:hover": { bgcolor: "#f9a825" },
                     }}
                   >
@@ -173,8 +176,10 @@ export default function HeroSlider() {
                     sx={{
                       color: "#fff",
                       borderColor: "#fff",
-                      px: 4,
-                      py: 1.4,
+                      px: { xs: 3, md: 4 },
+                      py: { xs: 1.2, md: 1.4 },
+                      fontSize: { xs: 13, md: 14 },
+                      width: { xs: "100%", sm: "auto" },
                       "&:hover": {
                         borderColor: "#fbc02d",
                         color: "#fbc02d",
