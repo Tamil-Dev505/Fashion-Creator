@@ -16,6 +16,8 @@ import g11Img from "../assets/gallery/g11.JPG";
 import g12Img from "../assets/gallery/g12.JPG";
 import workersImg from "../assets/about/workers.jpg";
 import buildingImg from "../assets/gallery/MAD_0418.JPG";
+import factoryImg1 from "../assets/gallery/MAD_0431.JPG";
+import factoryImg2 from "../assets/gallery/MAD_0432.JPG";
 
 const Counter = ({ value, suffix }) => {
   const [count, setCount] = useState(0);
@@ -179,6 +181,74 @@ export default function About() {
           <Typography variant="h4" fontWeight={800}>
             About Us
           </Typography>
+        </Container>
+      </Box>
+
+      {/* FACTORY IMAGES SECTION */}
+      <Box sx={{ py: 8, bgcolor: "#f9f9f9" }}>
+        <Container maxWidth="lg">
+          <Box
+            sx={{
+              display: "flex",
+              gap: 3,
+              flexDirection: { xs: "column", sm: "row" },
+              justifyContent: "center",
+            }}
+          >
+            <Box
+              sx={{
+                width: { xs: "100%", sm: "50%" },
+                maxWidth: 600,
+                height: 400,
+                borderRadius: 2,
+                overflow: "hidden",
+                boxShadow: "0 10px 40px rgba(0,0,0,0.1)",
+                transition: "transform 0.3s ease",
+                "&:hover": {
+                  transform: "translateY(-5px)",
+                  boxShadow: "0 15px 50px rgba(0,0,0,0.15)",
+                }
+              }}
+            >
+              <Box
+                component="img"
+                src={factoryImg1}
+                alt="Fashion Creator Factory"
+                sx={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                }}
+              />
+            </Box>
+
+            <Box
+              sx={{
+                width: { xs: "100%", sm: "50%" },
+                maxWidth: 600,
+                height: 400,
+                borderRadius: 2,
+                overflow: "hidden",
+                boxShadow: "0 10px 40px rgba(0,0,0,0.1)",
+                transition: "transform 0.3s ease",
+                "&:hover": {
+                  transform: "translateY(-5px)",
+                  boxShadow: "0 15px 50px rgba(0,0,0,0.15)",
+                }
+              }}
+            >
+              <Box
+                component="img"
+                src={factoryImg2}
+                alt="Fashion Creator Factory"
+                sx={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                }}
+              />
+            </Box>
+          </Box>
         </Container>
       </Box>
 
