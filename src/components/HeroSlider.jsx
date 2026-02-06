@@ -1,4 +1,5 @@
 import { Box, Typography, Button, Stack } from "@mui/material";
+import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade } from "swiper/modules";
 
@@ -156,6 +157,8 @@ export default function HeroSlider() {
                   }}
                 >
                   <Button
+                    component={Link}
+                    to="/contact"
                     variant="contained"
                     sx={{
                       bgcolor: "#fbc02d",
@@ -165,6 +168,7 @@ export default function HeroSlider() {
                       fontSize: { xs: 13, md: 14 },
                       fontWeight: 600,
                       width: { xs: "100%", sm: "auto" },
+                      textDecoration: "none",
                       "&:hover": { bgcolor: "#f9a825" },
                     }}
                   >
@@ -172,6 +176,8 @@ export default function HeroSlider() {
                   </Button>
 
                   <Button
+                    component={Link}
+                    to="/gallery"
                     variant="outlined"
                     sx={{
                       color: "#fff",
@@ -180,6 +186,7 @@ export default function HeroSlider() {
                       py: { xs: 1.2, md: 1.4 },
                       fontSize: { xs: 13, md: 14 },
                       width: { xs: "100%", sm: "auto" },
+                      textDecoration: "none",
                       "&:hover": {
                         borderColor: "#fbc02d",
                         color: "#fbc02d",
