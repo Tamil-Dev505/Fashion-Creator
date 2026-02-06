@@ -72,12 +72,11 @@ export default function AboutUs() {
             {/* BUILDING IMAGE */}
             <Box
               sx={{
-                width: 300,
+                width: "100%",
                 height: 420,
                 borderRadius: 2,
                 overflow: "hidden",
                 mb: 4,
-                mx: "auto",
                 boxShadow: "0 10px 40px rgba(0,0,0,0.1)",
                 transition: "transform 0.3s ease",
                 "&:hover": {
@@ -216,12 +215,11 @@ export default function AboutUs() {
     <Grid item xs={12} md={5}>
       <Box
         sx={{
-          width: 300,
+          width: "100%",
           height: 420,
           borderRadius: 2,
           overflow: "hidden",
           position: "relative",
-          mx: "auto",
           boxShadow: "0 10px 25px rgba(0,0,0,0.15)",
         }}
       >
