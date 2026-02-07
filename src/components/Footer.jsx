@@ -79,7 +79,7 @@ export default function Footer() {
               { label: "Home", path: "/" },
               { label: "About Us", path: "/about" },
               { label: "Infrastructure", path: "/infrastructure" },
-              { label: "Clientele", path: "/clientele" },
+              { label: "Clientale", path: "/clientale" },
               { label: "Patron", path: "/patron" },
               { label: "Gallery", path: "/gallery" },
               { label: "Contact", path: "/contact" },
